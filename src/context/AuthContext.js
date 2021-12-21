@@ -6,14 +6,15 @@ import {
 	onAuthStateChanged,
 	GoogleAuthProvider,
 	signInWithPopup,
-	sendPasswordResetEmail
+	// sendPasswordResetEmail,
 } from 'firebase/auth';
 import { auth } from '../firebase';
+import { Navigate } from 'react-router-dom';
 
 const userAuthContext = createContext();
 
 export function UserAuthContextProvider({ children }) {
-	const [user, setUser] = useState('');
+	const [user, setUser] = useState({});
 	function signUp(email, password) {
 		return createUserWithEmailAndPassword(auth, email, password);
 	}
@@ -37,7 +38,8 @@ export function UserAuthContextProvider({ children }) {
 		};
 	}, []);
 	return (
-		<userAuthContext.Provider value={{ user, signUp, logIn, logOut, googleSignIn }}>
+		<userAuthContext.Provider
+			value={{ user, signUp, logIn, logOut, googleSignIn }}>
 			{children}
 		</userAuthContext.Provider>
 	);
