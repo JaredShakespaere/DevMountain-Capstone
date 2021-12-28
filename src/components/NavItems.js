@@ -7,7 +7,7 @@ export const navItems = [
 	},
 	{
 		id: 2,
-		title: 'My Teams',
+		title: 'Add Teams',
 		path: './teams',
 		className: 'nav-item',
 	},

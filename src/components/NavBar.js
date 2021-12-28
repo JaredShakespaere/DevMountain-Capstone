@@ -4,11 +4,8 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faBasketballBall,
-	faUser,
-	faSignOutAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import { navItems } from './NavItems';
-import Logout from './Logout';
 import Dropdown from './Dropdown';
 
 export default function NavBar() {
@@ -26,7 +23,7 @@ export default function NavBar() {
 				</Link>
 				<ul className='nav-items'>
 					{navItems.map((item) => {
-						if (item.title === 'My Teams') {
+						if (item.title === 'Add Teams') {
 							return (
 								<li
 									key={item.id}
@@ -45,7 +42,6 @@ export default function NavBar() {
 						);
 					})}
 				</ul>
-				<Logout />
 			</nav>
 		</>
 	);

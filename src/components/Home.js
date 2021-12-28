@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Home.css';
-import { Button } from 'react-bootstrap';
 import { useUserAuth } from '../context/AuthContext';
 
 export default function Home() {

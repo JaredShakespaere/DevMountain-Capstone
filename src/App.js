@@ -10,19 +10,21 @@ import NavBar from './components/NavBar';
 import MyTeams from './components/MyTeams';
 import Profile from './components/Profile';
 
+
 function App() {
 	return (
 		<>
 			<NavBar />
 			<UserAuthContextProvider>
 				<Routes>
+					<Route path='/' element={<Login />} />
 					<Route path='/home' element={<Home />} />
 					<Route path='/teams' element={<MyTeams />} />
 					<Route path='/profile' element={<Profile />} />
 					<Route path='/signup' element={<Signup />} />
-					<Route path='/' element={<Login />} />
 				</Routes>
 			</UserAuthContextProvider>
+			
 		</>
 	);
 }
