@@ -18,10 +18,10 @@ function App() {
 			<UserAuthContextProvider>
 				<Routes>
 					<Route path='/' element={<Login />} />
+					<Route path='/signup' element={<Signup />} />
 					<Route path='/home' element={<Home />} />
 					<Route path='/teams' element={<MyTeams />} />
 					<Route path='/profile' element={<Profile />} />
-					<Route path='/signup' element={<Signup />} />
 				</Routes>
 			</UserAuthContextProvider>
 			

@@ -1,19 +1,25 @@
-var axios = require('axios').default;
-
-var options = {
-	method: 'GET',
-	url: 'https://api-nba-v1.p.rapidapi.com/leagues/',
-	headers: {
-		'x-rapidapi-host': 'api-nba-v1.p.rapidapi.com',
-		'x-rapidapi-key': '04ae5e1002msh74ff5480ca1af46p132c28jsn451192ec026b',
-	},
-};
-
-axios
-	.request(options)
-	.then(function (response) {
-		console.log(response.data);
+export default function NbaApi() {
+	fetch('https://api-nba-v1.p.rapidapi.com/teams/league/standard', {
+		method: 'GET',
+		headers: {
+			'x-rapidapi-host': 'api-nba-v1.p.rapidapi.com',
+			'x-rapidapi-key': '04ae5e1002msh74ff5480ca1af46p132c28jsn451192ec026b',
+		},
 	})
-	.catch(function (error) {
-		console.error(error);
-	});
+		.then((res) => {
+			return res.json();
+		}, [])
+		.then((data) => {
+			const someData = Object.values(data).map((select) => {
+				(select.teams.map((innerSelect) => {
+						if (innerSelect.nbaFranchise > 0) {
+							console.log(innerSelect.fullName);
+						}
+					}, [])
+				);
+			}, []);
+		})
+		.catch((err) => {
+			console.error(err);
+		});
+}
