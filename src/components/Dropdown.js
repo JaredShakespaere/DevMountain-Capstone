@@ -1,35 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Dropdown.css';
 import { teamsDropdown } from './NavItems';
 import { Link } from 'react-router-dom';
+import NbaApi from './NbaApi';
 
 
 export default function Dropdown() {
+	const [teams, updateTeams] = React.useState()
 	const [dropdown, setDropdown] = useState(false);
-	
 
-	fetch('https://api-nba-v1.p.rapidapi.com/teams/league/standard', {
-		method: 'GET',
-		headers: {
-			'x-rapidapi-host': 'api-nba-v1.p.rapidapi.com',
-			'x-rapidapi-key': '04ae5e1002msh74ff5480ca1af46p132c28jsn451192ec026b',
-		},
-	})
-		.then((res) => {
-			return res.json();
-		})
-		.then((data) => {
-			Object.values(data).map(select => {
-				select.teams.map(innerSelect => {
-					if (innerSelect.nbaFranchise > 0) {
-						console.log(innerSelect.fullName);
-					}
-				});
-			});
-		})
-		.catch((err) => {
-			console.error(err);
-		});
+	<NbaApi />
 	return (
 		<>
 			
