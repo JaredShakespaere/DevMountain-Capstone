@@ -3,7 +3,7 @@ import '../styles/Home.css';
 import { useUserAuth } from '../context/AuthContext';
 import TeamBall from './TeamBall';
 import TeamBallTwo from './TeamBallTwo';
-import SimpleSwiper from './SimpleSwiper';
+// import SimpleSwiper from './SimpleSwiper';
 
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
 		<>
 			<TeamBall  />
 			<TeamBallTwo />
-			<SimpleSwiper />
+			{/* <SimpleSwiper /> */}
 		</>
 	);
 }

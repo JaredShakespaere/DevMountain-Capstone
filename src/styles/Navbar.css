@@ -7,6 +7,7 @@
 	align-items: center;
 	justify-content: center;
 	box-shadow: #D9B08C 2px 2px 2px 2px;
+
 }
 .navbar-logo {
 	display: flex;
@@ -29,6 +30,7 @@
     width: 70vw;
     justify-content: flex-end;
     margin-right: 2rem;	
+
 
 } 
 .nav-item {

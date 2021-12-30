@@ -23,7 +23,7 @@ export default function NavBar() {
 				</Link>
 				<ul className='nav-items'>
 					{navItems.map((item) => {
-						if (item.title === 'Add Teams') {
+						if (item.title === 'Teams') {
 							return (
 								<li
 									key={item.id}
