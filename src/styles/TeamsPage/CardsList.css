@@ -1,0 +1,15 @@
+.full-card-list{
+    display: flex;
+    /* border: thick dotted lime; */
+     
+}
+.fullCard{
+    display: flex;
+    border: thick solid black;
+    width: 20%;
+    align-content: center;
+    box-shadow: 5px 5px;
+    border-radius: 5px;
+
+
+}

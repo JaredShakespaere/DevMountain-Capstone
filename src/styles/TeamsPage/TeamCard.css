@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+.card-list-layout {
+	display: flex;
+	/* border: rgb(79, 221, 102) thick dotted; */
+	width: 100%;
+	align-items: center;
+	flex-direction: column;
+}
+.fav-btn {
+	/* border: cadetblue dotted thick; */
+	border-radius: 5px;
+	width: 5vw;
+	height: 5vh;
+	font-family: 'roboto condensed';
+	font-size: medium;
+	font-weight: bolder;
+	box-shadow: 3px 3px 5px 5px;
+}

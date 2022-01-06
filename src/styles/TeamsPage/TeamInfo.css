@@ -1,0 +1,13 @@
+.team-info-outer-container{
+    display: flex;
+    /* border: red dotted thick; */
+    
+}
+.team-info-container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* border: red dotted thick; */
+    /* width: 100vw; */
+}
+

@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-	faBasketballBall,
-} from '@fortawesome/free-solid-svg-icons';
+import { faBasketballBall } from '@fortawesome/free-solid-svg-icons';
 import { navItems } from './NavItems';
-import Dropdown from './Dropdown';
+// import Dropdown from './Dropdown';
 
 export default function NavBar() {
-	const [dropdown, setDropdown] = useState(false);
+	// const [dropdown, setDropdown] = useState(false);
+	// const [teams, updateTeams] = React.useState(null);
+
 	return (
 		<>
 			<nav className='navbar'>
-				<Link to='/home' className='navbar-logo'>
+				<Link to='/favorites' className='navbar-logo'>
 					<FontAwesomeIcon
 						icon={faBasketballBall}
 						className='teams-icon'
@@ -23,18 +23,18 @@ export default function NavBar() {
 				</Link>
 				<ul className='nav-items'>
 					{navItems.map((item) => {
-						if (item.title === 'Teams') {
-							return (
-								<li
-									key={item.id}
-									className={item.className}
-									onMouseEnter={() => setDropdown(true)}
-									onMouseLeave={() => setDropdown(false)}>
-									<Link to={item.path}>{item.title}</Link>
-									{dropdown && <Dropdown />}
-								</li>
-							);
-						}
+						// if (item.title === 'Teams') {
+						// 	return (
+						// 		<li
+						// 			key={item.id}
+						// 			className={item.className}
+						// 			onMouseEnter={() => setDropdown(true)}
+						// 			onMouseLeave={() => setDropdown(false)}>
+						// 			<Link to={item.path}>{item.title}</Link>
+						// 			{dropdown && <Dropdown teams = {teams} updateTeams = {updateTeams}/>}
+						// 		</li>
+						// 	);
+						// }
 						return (
 							<li key={item.id} className={item.className}>
 								<Link to={item.path}>{item.title}</Link>

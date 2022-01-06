@@ -1,26 +1,28 @@
 .teams-dropdown {
-	display: absolute;
-	width: 10rem;
+	position: absolute;
+	width: 23vw;
 	height: 100%;
-	margin-top: 400px;
+	margin-top: 18.5vh;
 	text-align: center;
 	list-style: none;
 	text-overflow: start;
+	right: 0;
+	/* transition: width 3s; */
+	border: lime dotted thick;
 }
-.teams-dropdown li:hover {
+/* .teams-dropdown li:hover {
 	cursor: pointer;
-}
-.teams-dropdown.clicked {
+} */
+/* .teams-dropdown.clicked {
 	display: none;
-}
+} */
 .li-dropdown {
 	width: 100%;
-	height: 100%;
-	text-decoration: none;
+	/* height: 100%; */
 	color: whitesmoke;
-	padding: 16px;
+	padding: 5px;
+	background-color: #d1e8e2;
 	cursor: pointer;
+	border: red dotted thick;
 }
-.dropdown-item {
-    width: 10rem;
-}
+

@@ -23,7 +23,7 @@ const Login = () => {
 		setError('');
 		try {
 			await logIn(email, password);
-			navigate('/home');
+			navigate('/teams');
 		} catch (err) {
 			setError(err.message);
 		}

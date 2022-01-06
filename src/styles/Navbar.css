@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 
 .navbar {
 	display: flex;
@@ -18,7 +18,8 @@
 	justify-content: space-between;
 	width: 18rem;
 	margin-bottom: 20px;
-	font-family: calligraffit;
+	font-family: calligraffitti;
+	font-weight:bolder;
 }
 .navbar-logo:hover {
 	color: #116466
@@ -42,6 +43,7 @@
 }
 
 .nav-item a {
+	display: absolute;
     text-decoration: none;
     color: #116466;
     font-size: 1.1rem;
@@ -52,5 +54,10 @@
 }
 .nav-item a:hover {
     background: #D9B08C;
-
+}
+h1 {
+	color: #116466;
+	position: absolute;
+	font-family: calligraffitti;
+	font-weight:bolder;
 }
